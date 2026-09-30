@@ -2,5 +2,25 @@ services:
   - type: web
     name: veterinary-rag-api
     runtime: docker
+    plan: free
+    region: singapore
     dockerfilePath: ./docker/api.Dockerfile
     healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: FRONTEND_URL
+        value: https://veterinary-rag-assistant.vercel.app
+      - key: SUPABASE_URL
+        value: https://gflvcxlvorqisvwnnmgr.supabase.co
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: LLM_PROVIDER
+        value: openrouter
+      - key: LLM_MODEL
+        value: openrouter/auto
+      - key: LLM_API_KEY
+        sync: false
+      - key: EMBEDDING_PROVIDER
+        value: hash
