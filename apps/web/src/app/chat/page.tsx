@@ -1,0 +1,1 @@
+import {AppShell} from "@/components/app-shell";import {Chat} from "@/components/chat";export default function Page(){return <AppShell active="Ask assistant"><div className="page-head"><div><h1>Veterinary assistant</h1><p>Evidence-grounded guidance with safety triage.</p></div></div><Chat/></AppShell>}

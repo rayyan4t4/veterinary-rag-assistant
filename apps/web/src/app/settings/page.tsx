@@ -1,0 +1,1 @@
+import {AppShell} from "@/components/app-shell";export default function Page(){return <AppShell active="Settings"><div className="page-head"><div><h1>Settings</h1><p>Account, language, privacy and accessibility.</p></div></div></AppShell>}

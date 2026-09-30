@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: veterinary-rag-api
+    runtime: docker
+    dockerfilePath: ./docker/api.Dockerfile
+    healthCheckPath: /health
