@@ -11,3 +11,5 @@ coverage/
 dist/
 uploads/
 *.egg-info/
+tmp/
+/*.pdf
